@@ -363,6 +363,23 @@ body {
     text-decoration: underline;
 }
 
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 1058px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
 /* Footer */
 .footer {
     background-color: var(--text-color);
@@ -467,6 +484,11 @@ body {
         border-right: none;
         border-bottom: 1px solid var(--border-color);
     }
+
+    .form-container iframe {
+        max-width: 100%;
+        height: 900px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -507,5 +529,9 @@ body {
     .table-label,
     .table-value {
         padding: 16px;
+    }
+
+    .form-container iframe {
+        height: 800px;
     }
 }
