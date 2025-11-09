@@ -28,4 +28,4 @@ npx http-server
 
 ## ライセンス
 
-© 2021-2024 未来S/W&E研究所 All Rights Reserved.
+© 2021-2025 未来S/W&E研究所 All Rights Reserved.
