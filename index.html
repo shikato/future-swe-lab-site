@@ -18,6 +18,11 @@
                 <div class="logo-icon">🖥️</div>
                 <h1 class="site-title">未来S/W&E研究所</h1>
             </div>
+            <button class="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="nav">
                 <a href="#about">研究所について</a>
                 <a href="#members">研究所員紹介</a>
@@ -131,6 +136,23 @@
     </footer>
 
     <script>
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
         // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
