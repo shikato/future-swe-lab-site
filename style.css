@@ -59,7 +59,8 @@ body {
 }
 
 .logo-icon {
-    font-size: 28px;
+    width: 32px;
+    height: 32px;
 }
 
 .site-title {
@@ -143,7 +144,8 @@ body {
 }
 
 .hero-icon {
-    font-size: 64px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 24px;
     animation: float 3s ease-in-out infinite;
 }
@@ -436,7 +438,8 @@ body {
     }
 
     .logo-icon {
-        font-size: 24px;
+        width: 28px;
+        height: 28px;
     }
 
     .site-title {
@@ -448,7 +451,8 @@ body {
     }
 
     .hero-icon {
-        font-size: 48px;
+        width: 60px;
+        height: 60px;
     }
 
     .hero-title {
@@ -505,7 +509,8 @@ body {
     }
 
     .logo-icon {
-        font-size: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     .nav {
