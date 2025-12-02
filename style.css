@@ -182,6 +182,13 @@ body::before {
     margin-bottom: 12px;
     color: var(--primary-bright);
     text-shadow: var(--glow-text-bright);
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* iPad Safari: text-shadow causes blurry text */
+.is-ipad .hero-title {
+    text-shadow: 0 0 1px #00ff00;
 }
 
 .hero-subtitle {
