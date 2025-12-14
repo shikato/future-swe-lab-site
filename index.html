@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" id="html-root">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="未来S/W&E研究所 - 某スペースオペラとソフトウェアとIBN5100の研究開発">
-    <title>未来S/W&E研究所</title>
+    <meta name="description" content="未来S/W&E研究所 - 某スペースオペラとソフトウェアとIBN5100の研究開発" data-i18n="meta-description">
+    <title data-i18n="title">未来S/W&E研究所</title>
     <link rel="icon" type="image/svg+xml" href="logo.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +17,19 @@
         <div class="container">
             <div class="logo-container">
                 <img src="logo.svg" alt="ロゴ" class="logo-icon">
-                <h1 class="site-title">未来S/W&E研究所</h1>
+                <h1 class="site-title" data-i18n="site-title">未来S/W&E研究所</h1>
             </div>
-            <button class="hamburger" aria-label="メニュー">
+            <button class="hamburger" aria-label="メニュー" data-i18n-aria="menu-button">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <nav class="nav">
-                <a href="#about">研究所について</a>
-                <a href="#members">研究所員紹介</a>
-                <a href="#projects">研究開発成果</a>
-                <a href="#overview">事業概要</a>
-                <a href="#contact">お問い合わせ</a>
+                <a href="#about" data-i18n="nav-about">研究所について</a>
+                <a href="#members" data-i18n="nav-members">研究所員紹介</a>
+                <a href="#projects" data-i18n="nav-projects">研究開発成果</a>
+                <a href="#overview" data-i18n="nav-overview">事業概要</a>
+                <a href="#contact" data-i18n="nav-contact">お問い合わせ</a>
             </nav>
         </div>
     </header>
@@ -38,8 +38,8 @@
     <section class="hero">
         <div class="container">
             <img src="logo.svg" alt="ロゴ" class="hero-icon">
-            <h1 class="hero-title">未来S/W&E研究所</h1>
-            <p class="hero-subtitle">Future Software & Entertainment Laboratory</p>
+            <h1 class="hero-title" data-i18n="hero-title">未来S/W&E研究所</h1>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Future Software & Entertainment Laboratory</p>
         </div>
     </section>
 
@@ -47,10 +47,10 @@
     <section id="about" class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">未来S/W&E研究所について</h2>
+                <h2 class="section-title" data-i18n="about-title">未来S/W&E研究所について</h2>
             </div>
             <div class="content-box">
-                <p class="description">某スペースオペラとソフトウェアとIBN5100の研究開発に取り組んでおります。</p>
+                <p class="description" data-i18n="about-description">某スペースオペラとソフトウェアとIBN5100の研究開発に取り組んでおります。</p>
             </div>
         </div>
     </section>
@@ -59,12 +59,12 @@
     <section id="members" class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">研究所員紹介</h2>
+                <h2 class="section-title" data-i18n="members-title">研究所員紹介</h2>
             </div>
             <div class="member-card">
-                <h3 class="member-name">加藤 真也 (shikato)</h3>
-                <p class="member-description">某スペースオペラとソフトウェアとIBN5100に興味があります。</p>
-                <p class="member-profile">詳細なプロフィールは <a href="https://www.linkedin.com/in/%E7%9C%9F%E4%B9%9F-%E5%8A%A0%E8%97%A4-a52637201/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.wantedly.com/id/shinya_kato_p" class="link" target="_blank" rel="noopener noreferrer">Wantedly</a> / <a href="https://github.com/shikato" class="link" target="_blank" rel="noopener noreferrer">GitHub</a> をご確認ください。</p>
+                <h3 class="member-name" data-i18n="member-name">加藤 真也 (shikato)</h3>
+                <p class="member-description" data-i18n="member-description">某スペースオペラとソフトウェアとIBN5100に興味があります。</p>
+                <p class="member-profile" data-i18n="member-profile" data-i18n-html="true">詳細なプロフィールは <a href="https://www.linkedin.com/in/%E7%9C%9F%E4%B9%9F-%E5%8A%A0%E8%97%A4-a52637201/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.wantedly.com/id/shinya_kato_p" class="link" target="_blank" rel="noopener noreferrer">Wantedly</a> / <a href="https://github.com/shikato" class="link" target="_blank" rel="noopener noreferrer">GitHub</a> をご確認ください。</p>
             </div>
         </div>
     </section>
@@ -73,41 +73,41 @@
     <section id="projects" class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">研究開発成果</h2>
+                <h2 class="section-title" data-i18n="projects-title">研究開発成果</h2>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-tag">ゲーム</div>
+                    <div class="project-tag" data-i18n="tag-game">ゲーム</div>
                     <h3 class="project-title">VOID DIVE</h3>
                     <p class="project-description">Coming Soon - iOS / Android</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-tag">サービス</div>
+                    <div class="project-tag" data-i18n="tag-service">サービス</div>
                     <h3 class="project-title"><a href="https://shikato.github.io/anchor-partner/" class="project-link" target="_blank" rel="noopener noreferrer">Anchor Partner</a></h3>
                 </div>
                 <div class="project-card">
-                    <div class="project-tag">iOSアプリ</div>
-                    <h3 class="project-title"><a href="https://apps.apple.com/jp/app/%E3%82%AD%E3%83%A1%E3%83%84%E3%81%AE%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9-for-%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83/id1559947769" class="project-link" target="_blank" rel="noopener noreferrer">キメツのニュース for 鬼滅の刃</a></h3>
+                    <div class="project-tag" data-i18n="tag-ios">iOSアプリ</div>
+                    <h3 class="project-title"><a href="https://apps.apple.com/jp/app/%E3%82%AD%E3%83%A1%E3%83%84%E3%81%AE%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9-for-%E9%AC%BC%E6%BB%85%E3%81%AE%E5%88%83/id1559947769" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project-kimetsu">キメツのニュース for 鬼滅の刃</a></h3>
                 </div>
                 <div class="project-card">
-                    <div class="project-tag award">受賞作品</div>
+                    <div class="project-tag award" data-i18n="tag-award">受賞作品</div>
                     <h3 class="project-title"><a href="https://dic.nicovideo.jp/a/otoge.net" class="project-link" target="_blank" rel="noopener noreferrer">otoge.net</a></h3>
-                    <p class="project-description">(クローズ済のためユーザーが書いてくれたページをリンク)</p>
+                    <p class="project-description" data-i18n="project-otoge-desc">(クローズ済のためユーザーが書いてくれたページをリンク)</p>
                     <p class="project-award">Mashup Awards7 U-23賞</p>
                 </div>
                 <div class="project-card">
-                    <div class="project-tag award">受賞作品</div>
+                    <div class="project-tag award" data-i18n="tag-award">受賞作品</div>
                     <h3 class="project-title"><a href="https://qiita.com/shikato/items/e490f71b5d478f97a905" class="project-link" target="_blank" rel="noopener noreferrer">mups</a></h3>
-                    <p class="project-description">(クローズ済のためQiitaに投稿した記事をリンク)</p>
+                    <p class="project-description" data-i18n="project-mups-desc">(クローズ済のためQiitaに投稿した記事をリンク)</p>
                     <p class="project-award">Mashup Awards10 ドワンゴ賞 TINAMI賞</p>
                 </div>
                 <div class="project-card">
                     <div class="project-tag">OSS</div>
-                    <h3 class="project-title"><a href="https://github.com/shikato" class="project-link" target="_blank" rel="noopener noreferrer">オープンソースソフトウェア</a></h3>
+                    <h3 class="project-title"><a href="https://github.com/shikato" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project-oss">オープンソースソフトウェア</a></h3>
                 </div>
                 <div class="project-card">
-                    <div class="project-tag">技術記事</div>
-                    <h3 class="project-title"><a href="https://qiita.com/shikato" class="project-link" target="_blank" rel="noopener noreferrer">Qiita 技術記事一覧</a></h3>
+                    <div class="project-tag" data-i18n="tag-article">技術記事</div>
+                    <h3 class="project-title"><a href="https://qiita.com/shikato" class="project-link" target="_blank" rel="noopener noreferrer" data-i18n="project-qiita">Qiita 技術記事一覧</a></h3>
                 </div>
             </div>
         </div>
@@ -117,20 +117,20 @@
     <section id="overview" class="section section-dark">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">事業概要</h2>
+                <h2 class="section-title" data-i18n="overview-title">事業概要</h2>
             </div>
             <div class="overview-table">
                 <div class="table-row">
-                    <div class="table-label">屋号</div>
-                    <div class="table-value">未来S/W&E研究所</div>
+                    <div class="table-label" data-i18n="overview-name-label">屋号</div>
+                    <div class="table-value" data-i18n="overview-name-value">未来S/W&E研究所</div>
                 </div>
                 <div class="table-row">
-                    <div class="table-label">設立</div>
-                    <div class="table-value">2021年5月6日</div>
+                    <div class="table-label" data-i18n="overview-established-label">設立</div>
+                    <div class="table-value" data-i18n="overview-established-value">2021年5月6日</div>
                 </div>
                 <div class="table-row">
-                    <div class="table-label">事業内容</div>
-                    <div class="table-value">ソフトウェアのデザイン/研究/開発/運用/販売</div>
+                    <div class="table-label" data-i18n="overview-business-label">事業内容</div>
+                    <div class="table-value" data-i18n="overview-business-value">ソフトウェアのデザイン/研究/開発/運用/販売</div>
                 </div>
             </div>
         </div>
@@ -140,10 +140,10 @@
     <section id="contact" class="section section-light">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">お問い合わせ</h2>
+                <h2 class="section-title" data-i18n="contact-title">お問い合わせ</h2>
             </div>
             <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd0_JEP_FMlPLJbibV4ZubjIstNFmfPQrrWx6c_V0ACGd9iMg/viewform?embedded=true" width="640" height="1058" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd0_JEP_FMlPLJbibV4ZubjIstNFmfPQrrWx6c_V0ACGd9iMg/viewform?embedded=true" width="640" height="1058" frameborder="0" marginheight="0" marginwidth="0" data-i18n="contact-loading" data-i18n-src="contact-form-src">読み込んでいます…</iframe>
             </div>
         </div>
     </section>
@@ -151,11 +151,114 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2021-2025 未来S/W&E研究所 All Rights Reserved.</p>
+            <p data-i18n="footer-copyright">&copy; 2021-2025 未来S/W&E研究所 All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
+        // i18n translations
+        const i18n = {
+            en: {
+                'title': 'Future S/W&E Lab',
+                'meta-description': 'Future S/W&E Lab - Research and development of a certain space opera, software, and IBN5100',
+                'site-title': 'Future S/W&E Lab',
+                'menu-button': 'Menu',
+                'nav-about': 'About',
+                'nav-members': 'Members',
+                'nav-projects': 'Projects',
+                'nav-overview': 'Overview',
+                'nav-contact': 'Contact',
+                'hero-title': 'Future S/W&E Lab',
+                'hero-subtitle': 'Future Software & Entertainment Laboratory',
+                'about-title': 'About Future S/W&E Lab',
+                'about-description': 'We are engaged in research and development of a certain space opera, software, and IBN5100.',
+                'members-title': 'Members',
+                'member-name': 'Shinya Kato (shikato)',
+                'member-description': 'Interested in a certain space opera, software, and IBN5100.',
+                'member-profile': 'For detailed profile, please see <a href="https://www.linkedin.com/in/%E7%9C%9F%E4%B9%9F-%E5%8A%A0%E8%97%A4-a52637201/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a> / <a href="https://www.wantedly.com/id/shinya_kato_p" class="link" target="_blank" rel="noopener noreferrer">Wantedly</a> / <a href="https://github.com/shikato" class="link" target="_blank" rel="noopener noreferrer">GitHub</a>.',
+                'projects-title': 'Projects',
+                'tag-game': 'Game',
+                'tag-service': 'Service',
+                'tag-ios': 'iOS App',
+                'tag-award': 'Award Winner',
+                'tag-article': 'Tech Articles',
+                'project-kimetsu': 'Kimetsu News for Demon Slayer',
+                'project-otoge-desc': '(Closed - Link to a page written by users)',
+                'project-mups-desc': '(Closed - Link to Qiita article)',
+                'project-oss': 'Open Source Software',
+                'project-qiita': 'Qiita Tech Articles',
+                'overview-title': 'Business Overview',
+                'overview-name-label': 'Business Name',
+                'overview-name-value': 'Future S/W&E Lab',
+                'overview-established-label': 'Established',
+                'overview-established-value': 'May 6, 2021',
+                'overview-business-label': 'Business',
+                'overview-business-value': 'Software Design / Research / Development / Operation / Sales',
+                'contact-title': 'Contact',
+                'contact-loading': 'Loading...',
+                'contact-form-src': 'https://docs.google.com/forms/d/e/1FAIpQLScQDo-LE2_HUaYS-sDR46-xl2yfxYuyvtFbAkpEIFi5mBgKjw/viewform?embedded=true',
+                'footer-copyright': '© 2021-2025 Future S/W&E Lab All Rights Reserved.'
+            }
+        };
+
+        // Language detection and switching
+        function applyLanguage() {
+            const userLang = navigator.language || navigator.userLanguage;
+            const isJapanese = userLang.startsWith('ja');
+
+            if (isJapanese) {
+                return; // Keep Japanese (default)
+            }
+
+            // Apply English translations
+            const translations = i18n.en;
+            document.getElementById('html-root').lang = 'en';
+
+            // Update title
+            document.title = translations['title'];
+
+            // Update meta description
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) {
+                metaDesc.setAttribute('content', translations['meta-description']);
+            }
+
+            // Update elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[key]) {
+                    if (el.hasAttribute('data-i18n-html')) {
+                        el.innerHTML = translations[key];
+                    } else if (el.tagName === 'TITLE') {
+                        el.textContent = translations[key];
+                    } else if (el.tagName === 'META') {
+                        el.setAttribute('content', translations[key]);
+                    } else {
+                        el.textContent = translations[key];
+                    }
+                }
+            });
+
+            // Update aria-label for accessibility
+            document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+                const key = el.getAttribute('data-i18n-aria');
+                if (translations[key]) {
+                    el.setAttribute('aria-label', translations[key]);
+                }
+            });
+
+            // Update src attributes (for iframes, etc.)
+            document.querySelectorAll('[data-i18n-src]').forEach(el => {
+                const key = el.getAttribute('data-i18n-src');
+                if (translations[key]) {
+                    el.setAttribute('src', translations[key]);
+                }
+            });
+        }
+
+        // Apply language immediately
+        applyLanguage();
+
         // iPad detection (iPadOS 13+ reports as Mac, so check maxTouchPoints)
         const isIPad = /iPad/.test(navigator.userAgent) ||
                        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
