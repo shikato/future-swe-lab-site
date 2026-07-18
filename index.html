@@ -40,6 +40,7 @@
             <img src="logo.svg" alt="ロゴ" class="hero-icon">
             <h1 class="hero-title" data-i18n="hero-title">未来S/W&E研究所</h1>
             <p class="hero-subtitle" data-i18n="hero-subtitle">Future Software & Entertainment Laboratory</p>
+            <p class="hero-meter" aria-hidden="true"></p>
         </div>
     </section>
 
@@ -78,8 +79,14 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-tag" data-i18n="tag-service">サービス</div>
-                    <h3 class="project-title" data-i18n="project-ai-system">AI適用システム（詳細非公開）</h3>
-                    <p class="project-description" data-i18n="project-ai-system-desc">AIを中核に据えた実験的システム。ほぼ無人での運営ながらデイリー約3,000PVに到達し、主要キーワードで検索1位を獲得。</p>
+                    <h3 class="project-title" data-i18n="project-ai-system">ローカルAI適用システム（詳細非公開）</h3>
+                    <p class="project-description" data-i18n="project-ai-system-desc">ローカルAIを中核に据えた実験的システム。ほぼ無人での運営ながらデイリー約3,000PVに到達し、主要キーワードで検索1位を獲得。</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-tag soon" data-i18n="tag-soon">近日公開</div>
+                    <div class="project-tag" data-i18n="tag-research">研究</div>
+                    <h3 class="project-title">Project IBN5100</h3>
+                    <p class="project-description" data-i18n="project-ibn5100-desc">IBN5100を現代の技術で忠実に再現する研究。当時の純正BASIC / APLインタプリタがそのまま動作する水準に到達済み。※IBM 5100とは別物。</p>
                 </div>
                 <div class="project-card">
                     <div class="project-tag" data-i18n="tag-game">ゲーム</div>
@@ -189,10 +196,13 @@
                 'tag-service': 'Service',
                 'tag-ios': 'iOS App',
                 'tag-award': 'Award Winner',
+                'tag-soon': 'Coming Soon',
+                'tag-research': 'Research',
                 'tag-article': 'Tech Articles',
                 'project-voiddive-desc': 'An output produced by an experimental system that runs everything end-to-end with AI, from game design to store submission.',
-                'project-ai-system': 'AI-Applied System (details undisclosed)',
-                'project-ai-system-desc': 'An experimental system built around AI. Operating almost entirely unattended, it has reached ~3,000 daily page views and the #1 spot in search results for a major keyword.',
+                'project-ai-system': 'Local-AI-Applied System (details undisclosed)',
+                'project-ai-system-desc': 'An experimental system built around local AI. Operating almost entirely unattended, it has reached ~3,000 daily page views and the #1 spot in search results for a major keyword.',
+                'project-ibn5100-desc': 'A study in faithfully recreating the IBN5100 with modern technology. It has already reached the point where the original BASIC / APL interpreters of the era run as-is. Not to be confused with the IBM 5100.',
                 'project-kimetsu': 'Kimetsu News for Demon Slayer',
                 'project-otoge-desc': '(Closed - Link to a page written by users)',
                 'project-mups-desc': '(Closed - Link to Qiita article)',
@@ -309,6 +319,8 @@
                 if (currentStep >= steps) {
                     clearInterval(timer);
                     element.textContent = targetText;
+                    element.dataset.text = targetText;
+                    element.classList.add('glitch-on');
                 }
             }, interval);
         }
@@ -321,6 +333,32 @@
                 playDecodingEffect(heroTitle, targetText);
             }
         });
+
+        // Divergence meter: each visit observes a worldline in the
+        // uncharted 1.5-2.9 band. The reading stays put; every 20-45s a
+        // worldline shift makes the digits shudder briefly, then settle.
+        const meter = document.querySelector('.hero-meter');
+        if (meter) {
+            let divergence = 1.5 + Math.random() * 1.4;
+            const render = v => { meter.textContent = v.toFixed(6); };
+            render(divergence);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                const scheduleShift = () => setTimeout(() => {
+                    divergence += (Math.random() - 0.5) * (Math.random() < 0.1 ? 0.01 : 0.0005);
+                    const end = Date.now() + 500;
+                    const shudder = setInterval(() => {
+                        if (Date.now() >= end) {
+                            clearInterval(shudder);
+                            render(divergence);
+                        } else {
+                            render(divergence + (Math.random() - 0.5) * 0.002);
+                        }
+                    }, 60);
+                    scheduleShift();
+                }, 20000 + Math.random() * 25000);
+                scheduleShift();
+            }
+        }
 
         // Hamburger menu toggle
         const hamburger = document.querySelector('.hamburger');
